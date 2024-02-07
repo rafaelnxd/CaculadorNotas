@@ -14,7 +14,7 @@ def main():
     st.title("Calculadora de Média")
 
 
-    escolha = st.radio("Escolha uma opção:", ["Calcular média do semestre", "Calcular média anual", "Sair"])
+    escolha = st.radio("Escolha uma opção:", ["Calcular média do semestre", "Calcular média anual"])
 
     if escolha == "Calcular média do semestre":
         st.subheader("Calcular Média do Semestre")
