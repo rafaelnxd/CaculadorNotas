@@ -43,8 +43,7 @@ def main():
         st.write(f"A média anual é: {media_anual}")
 
 
-    elif escolha == "Sair":
-        st.write("Saindo...")
+   
         
 
 if __name__ == "__main__":
