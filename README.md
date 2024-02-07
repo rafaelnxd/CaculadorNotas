@@ -27,7 +27,7 @@ Esta é uma ferramenta feita para ajudar você a calcular suas médias semestrai
 
     Ao ativar a virtualenv, todas as dependências necessárias para o projeto serão acessíveis.
 
-...
+
 3. **Execução da Aplicação**
 
     Agora que tudo está configurado, você pode iniciar a aplicação com o seguinte comando:
