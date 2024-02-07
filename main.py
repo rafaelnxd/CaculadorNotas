@@ -3,25 +3,27 @@ import streamlit as st
 
 
 def main():
+    st.title("Calculadora de Média")
+    st.header("Bem-vindo à Calculadora Faz o L")
+
     while True:
-        escolha = int(input("1. Calcular média do semestre\n2. Calcular média anual\n3. Sair\nEscolha uma opção: "))
+        escolha = st.selectbox("Escolha uma opção:", ["Calcular média do semestre", "Calcular média anual", "Sair"])
 
-        if escolha == 1:
+        if escolha == "Calcular média do semestre":
+            st.subheader("Calcular Média do Semestre")
             media_semestre01 = calcular_media_semestre()
-            print(media_semestre01)
-        elif escolha == 2:
+            st.write(f"A média do semestre é: {media_semestre01}")
+
+        elif escolha == "Calcular média anual":
+            st.subheader("Calcular Média Anual")
             media_semestre01 = calcular_media_semestre()
-            print(media_semestre01)
             media_semestre02 = calcular_media_semestre()
-            print(media_semestre02)
             media_anual = calcular_media_anual(media_semestre01, media_semestre02)
-            print(media_anual)
-        elif escolha == 3:
-            print("Saindo...")
-            break
-        else:
-            print("Opção inválida. Por favor, escolha uma opção válida.")
+            st.write(f"A média anual é: {media_anual}")
 
+        elif escolha == "Sair":
+            st.write("Saindo...")
+            break
 
 if __name__ == "__main__":
     main()

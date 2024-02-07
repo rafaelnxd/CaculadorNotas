@@ -1,69 +1,34 @@
+import streamlit as st
+
 def calcular_media_semestre():
-
-    # pesocpsp = 4
-    # peso_gs = 6
-    
-    # cp0101 = float(input(f"Informe a nota do 1º checkpoint do primeiro semestre: "))
-    # cp0201 = float(input(f"Informe a nota do 2º checkpoint do primeiro semestre: "))
-
-    # sp01 = float(input(f"Informe a nota da 1ª sprint: "))
-    # sp02 = float(input(f"Informe a nota da 2ª sprint: "))
-
-    # media_cpsp = (cp0101 + cp0201 + sp01 + sp02) / 4
-    
-    # print("Média dos checkpoints e sprints:", media_cpsp)
-
-    # gs01 = float(input(f"Informe a nota da Global Solution do primeiro semestre: "))
-
-    # media_semestre = (media_cpsp * pesocpsp + gs01 * peso_gs) / (pesocpsp + peso_gs)
-
-    
-    # return media_semestre
-
     pesocpsp = 4
     peso_gs = 6
 
     notas_checkpoint = []
     for i in range(3):
-        nota_checkpoint = float(input(f"Informe a nota do {i+1}º checkpoint: "))
+        chave = f"nota_checkpoint_{i+1}"
+        nota_checkpoint = st.number_input(f"Informe a nota do {i+1}º checkpoint: ", key=chave)
         notas_checkpoint.append(nota_checkpoint)
 
     menor_nota = min(notas_checkpoint)
     notas_checkpoint.remove(menor_nota)
 
-    sp01 = float(input(f"Informe a nota da 1ª sprint: "))
-    sp02 = float(input(f"Informe a nota da 2ª sprint: "))
+    sp01 = st.number_input("Informe a nota da 1ª sprint: ", key="sp01")
+    sp02 = st.number_input("Informe a nota da 2ª sprint: ", key="sp02")
 
     media_cpsp = (sum(notas_checkpoint) + sp01 + sp02) / 4
-    print("Média dos checkpoints e sprints:", media_cpsp)
+    st.write("Média dos checkpoints e sprints:", media_cpsp)
 
-    gs01 = float(input(f"Informe a nota da Global Solution: "))
+    gs01 = st.number_input("Informe a nota da Global Solution: ", key="gs01")
 
     media_semestre = (media_cpsp * pesocpsp + gs01 * peso_gs) / (pesocpsp + peso_gs)
 
     return media_semestre
 
-
-
 def calcular_media_anual(media_semestre01, media_semestre02):
-
     pesosemestre1 = 4
     pesosemestre2 = 6
 
     media_anual = (media_semestre01 * pesosemestre1 + media_semestre02 * pesosemestre2) / (pesosemestre1 + pesosemestre2)
 
     return media_anual
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-
