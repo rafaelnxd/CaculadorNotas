@@ -2,6 +2,8 @@
 
 Esta é uma ferramenta feita para ajudar você a calcular suas médias semestrais e anuais da FIAP.
 
+### https://mediafiap.streamlit.app
+
 ### Como Começar
 
 1. **Ativação da Virtualenv**
