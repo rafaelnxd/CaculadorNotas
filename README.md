@@ -6,27 +6,31 @@ Esta é uma ferramenta feita para ajudar você a calcular suas médias semestrai
 
 ### Como Começar
 
-1. **Ativação da Virtualenv**
+1. **Configuração do Ambiente**
 
-    Antes de iniciar a aplicação, certifique-se de ativar a virtualenv. Siga estas etapas simples:
+    Antes de iniciar a aplicação, certifique-se de criar e ativar a virtualenv. Siga estas etapas simples:
 
     - No terminal, navegue até o diretório do projeto.
-    - Para ativar a virtualenv:
-
+    - Crie um ambiente virtual (venv) utilizando o Python:
         - **Windows:**
-
+            ```bash
+            python -m venv venv
+            ```
+        - **Linux/Mac:**
+            ```bash
+            python3 -m venv venv
+            ```
+    - Para ativar a virtualenv:
+        - **Windows:**
             ```bash
             venv\Scripts\activate
             ```
-
         - **Linux/Mac:**
-
             ```bash
             source venv/bin/activate
             ```
 
     Ao ativar a virtualenv, todas as dependências necessárias para o projeto serão acessíveis.
-
 
 3. **Execução da Aplicação**
 
@@ -58,5 +62,3 @@ Esta é uma ferramenta feita para ajudar você a calcular suas médias semestrai
 ### Contribuindo
 
 Se você encontrar algum problema ou tiver ideias para melhorar a aplicação, adoraria ouvir sua opinião! Sinta-se à vontade para abrir uma issue ou enviar um pull request no repositório.
-
-
